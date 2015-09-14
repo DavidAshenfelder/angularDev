@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- other css files -->
+  <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+  <!-- Load My CSS Last -->
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <title>StackedTabs</title>
+</head>
+<body>
+
+
+<ng-view></ng-view>
+
+
+<!-- dependancies js scripts -->
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js">
+
+</script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- app js scripts -->
+<script type="text/javascript" src="app.js"></script>
+<!--stackedTabs files -->
+<script src="stackedTabs/stackedTabs.module.js"></script>
+<script src="stackedTabs/stackedTabs.controller.js"></script>
+<script src="stackedTabs/stackedTabs.service.js"></script>
+
+</body>
+</html>

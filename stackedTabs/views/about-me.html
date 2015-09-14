@@ -1,0 +1,25 @@
+<tab heading="About Me">
+  <div class="formWrapper">
+    <form name="resumeForm" class="overflow" ng-controller="StackedTabsController" novalidate>
+      <div class="form-group col-md-6">
+            <label class="col-md-6">First Name</label>
+            <input class="form-control col-md-8 input-lg" type="text" name="firstName" ng-model="profile.firstName" placeholder="First Name" ng-pattern="/^(\D)+$/" autofocus required>
+            <p ng-show='myform.ip.$invalid'>Error</p>
+      </div>
+      <div class="form-group col-md-6">
+            <label class="col-md-6">Last Name</label>
+            <input class="form-control col-md-8 input-lg" name="lastName" ng-pattern="/^(\D)+$/" type="text" ng-model="profile.LastName" placeholder="Last Name" required>
+      </div>
+      <div class="form-group col-md-12">
+        <label class="col-md-2">Phone Number</label>
+        <input class="form-control col-md-8 input-lg" name="phone" ng-model="profile.phone" type="text" ng-pattern="/^[0-9()-]+$/" maxlength="10" placeholder="phone number" required >
+        <div class="alert alert-danger" ng-show="resumeForm.phone.$dirty && resumeForm.phone.$error.required">
+          Please enter your Phone Number!
+        </div>
+      </div>
+      <div class="form-group col-md-12">
+        <button type="submit" disabled="resumeForm.$invalid" class="btn btn-lg btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</tab>

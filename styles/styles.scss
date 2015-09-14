@@ -1,0 +1,68 @@
+
+@import "partials/resume.scss";
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+body {
+  background-color: #e4e4e4;
+}
+form {
+  .ng-valid.ng-dirty {
+    border: 1px solid green;
+  }
+  .ng-invalid.ng-dirty {
+    border: 2px solid red;
+  }
+}
+
+.form-title {
+  text-align: center;
+  font-size: 48px;
+  background-color: #595959;
+  font-family: serif;
+  color: #BB6B0C;
+}
+
+
+.tabs-left {
+    border-bottom: 0;
+    margin: 5px;
+    padding: 1%;
+}
+
+.tabs-left > .nav-tabs {
+    float: left;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+    position: sticky;
+}
+
+.tabs-left > .nav-tabs > li > a {
+    margin-right: -1px;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+    border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+    border-right: none;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+    border-color: #ddd transparent #ddd #ddd;
+    *border-right-color: #ffffff;
+}
+
+.resume-form {
+  overflow: scroll;
+  background-color: white;
+  height: 100vh;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 1%;
+}
