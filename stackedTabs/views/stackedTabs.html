@@ -22,70 +22,70 @@
     <tabset class="tabs-left" vertical="true">
       <tab heading="Contact Info">
         <div class="form-wrapper">
-          <form name="contactForm" ng-submit="updateInfo(contactForm)" class="resume-form" ng-controller="StackedTabsController">
+          <form ng-submit="updateInfo(interview)" class="resume-form" ng-controller="StackedTabsController">
             <div class="form-group col-md-6">
                   <label class="col-md-6">First Name</label>
-                  <input class="form-control col-md-8 input-lg" type="text" name="firstName" ng-model="firstName" placeholder="First Name" ng-pattern="/^(\D)+$/" autofocus required>
-                  <div class="alert alert-danger" ng-show="contactForm.firstName.$dirty && contactForm.firstName.$error.required">
+                  <input class="form-control col-md-8 input-lg" type="text" ng-model="interview.firstName" placeholder="First Name" ng-pattern="/^(\D)+$/" autofocus required>
+                  <div class="alert alert-danger" ng-show="interview.firstName.$dirty && interview.firstName.$error.required">
                     Please enter your first name!
                   </div>
             </div>
             <div class="form-group col-md-6">
               <label class="col-md-6">Last Name</label>
-              <input class="form-control col-md-6 input-lg" name="lastName" ng-pattern="/^(\D)+$/" type="text" ng-model="lastName" placeholder="Last Name" required>
-              <div class="alert alert-danger" ng-show="contactForm.lastName.$dirty && contactForm.lastName.$error.required">
+              <input class="form-control col-md-6 input-lg" ng-pattern="/^(\D)+$/" type="text" ng-model="interview.lastName" placeholder="Last Name" required>
+              <div class="alert alert-danger" ng-show="interview.lastName.$dirty && interview.lastName.$error.required">
                 Please enter your last name!
               </div>
             </div>
             <div class="form-group col-md-12">
               <label class="col-md-12">Street Address</label>
-              <input class="form-control col-md-12 input-lg" name="streetAddress" ng-model="streetAddress" type="text" placeholder="Street Address" required >
-              <div class="alert alert-danger" ng-show="contactForm.streetAddress.$dirty && contactForm.streetAddress.$error.required">
+              <input class="form-control col-md-12 input-lg" ng-model="interview.streetAddress" type="text" placeholder="Street Address" required >
+              <div class="alert alert-danger" ng-show="interview.streetAddress.$dirty && interview.streetAddress.$error.required">
                 Please enter your street address!
               </div>
             </div>
               <div class="form-group col-md-4">
                 <label class="col-md-4">City</label>
-                <input class="form-control col-md-4 input-lg" name="city" ng-pattern="/^(\D)+$/" type="text" ng-model="city" placeholder="City" required>
-                <div class="alert alert-danger" ng-show="contactForm.city.$dirty && contactForm.city.$error.required">
+                <input class="form-control col-md-4 input-lg" ng-pattern="/^(\D)+$/" type="text" ng-model="interview.city" placeholder="City" required>
+                <div class="alert alert-danger" ng-show="interview.city.$dirty && interview.city.$error.required">
                   Please enter your city!
                 </div>
               </div>
               <div class="form-group col-md-4">
                 <label class="col-md-4">State</label>
-                <input class="form-control col-md-4 input-lg" name="state" ng-pattern="/^(\D)+$/" type="text" ng-model="state" placeholder="State" required>
-                <div class="alert alert-danger" ng-show="contactForm.state.$dirty && contactForm.state.$error.required">
+                <input class="form-control col-md-4 input-lg" ng-pattern="/^(\D)+$/" type="text" ng-model="interview.state" placeholder="State" required>
+                <div class="alert alert-danger" ng-show="interview.state.$dirty && interview.state.$error.required">
                   Please enter your state!
                 </div>
               </div>
               <div class="form-group col-md-4">
                 <label class="col-md-4">Zip Code</label>
-                <input class="form-control col-md-4 input-lg" name="zip" maxlength="5" ng-pattern="/^[0-9()-]+$/" type="text" ng-model="zip" placeholder="Zip" required>
-                <div class="alert alert-danger" ng-show="contactForm.zip.$dirty && contactForm.zip.$error.required">
+                <input class="form-control col-md-4 input-lg" maxlength="5" ng-pattern="/^[0-9()-]+$/" type="text" ng-model="interview.zip" placeholder="Zip" required>
+                <div class="alert alert-danger" ng-show="interview.zip.$dirty && interview.zip.$error.required">
                   Please enter your zip code!
                 </div>
               </div>
               <div class="form-group col-md-6">
                 <label class="col-md-6">Phone Number</label>
-                <input class="form-control col-md-6 input-lg" name="phone" ng-model="phone" type="text" ng-pattern="/^[0-9()-]+$/" maxlength="10" placeholder="Phone Number" required >
-                <div class="alert alert-danger" ng-show="contactForm.phone.$dirty && contactForm.phone.$error.required">
+                <input class="form-control col-md-6 input-lg" ng-model="interview.phone" type="text" ng-pattern="/^[0-9()-]+$/" maxlength="10" placeholder="Phone Number" required >
+                <div class="alert alert-danger" ng-show="interview.phone.$dirty && interview.phone.$error.required">
                   Please enter your phone number!
                 </div>
               </div>
               <div class="form-group col-md-6">
                 <label class="col-md-6">Email Address</label>
-                <input class="form-control col-md-6 input-lg" name="email" ng-model="email" type="text" placeholder="Email Address" required >
-                <div class="alert alert-danger" ng-show="contactForm.email.$dirty && contactForm.email.$error.required">
+                <input class="form-control col-md-6 input-lg" ng-model="interview.email" type="text" placeholder="Email Address" required >
+                <div class="alert alert-danger" ng-show="interview.email.$dirty && interview.email.$error.required">
                   Please enter your email address!
                 </div>
               </div>
               <div class="form-group col-md-12">
                 <label class="col-md-12">Website</label>
-                <input class="form-control <col-md-12></col-md-12> input-lg" name="website" ng-model="website" type="text" placeholder="Website">
+                <input class="form-control col-md-12 input-lg" ng-model="interview.website" type="text" placeholder="Website">
               </div>
             <div class="form-group col-md-6">
-              <button type="submit" ng-disabled="contactForm.$invalid" class="btn btn-lg btn-primary col-md-12">Submit</button>
-              <div class="alert alert-warning" ng-show="contactForm.$valid">
+              <button type="submit" ng-disabled="interview.$invalid" class="btn btn-lg btn-primary col-md-12">Submit</button>
+              <div class="alert alert-warning" ng-show="interview.$valid">
                 Please make sure you complete and submit each section.
               </div>
             </div>
@@ -94,49 +94,49 @@
       </tab>
       <tab heading=" Dev Skills">
         <div>
-          <form name="skillsForm" ng-submit="updateInfo(skillsForm)" class="resume-form">
+          <form ng-submit="updateInfo(interview)" class="resume-form" ng-controller="StackedTabsController">
             <div class="form-group col-md-10">
               <label class="col-md-10">Skill Set Title</label>
-              <input class="form-control col-md-10 input-lg" name="skillSetTitle1" ng-model="skillSetTitle1" type="text" placeholder="Skill Set Title" required>
-              <div class="alert alert-danger" ng-show="skillsForm.skillSetTitle1.$dirty && skillsForm.skillSetTitle1.$error.required">
+              <input class="form-control col-md-10 input-lg" ng-model="interview.skillSetTitle1" type="text" placeholder="Skill Set Title" required>
+              <div class="alert alert-danger" ng-show="interview.skillSetTitle1.$dirty && interview.skillSetTitle1.$error.required">
                 Please enter at least one skill set title!
               </div>
               <label class="col-md-8">Skills</label>
-              <input class="form-control col-md-9" name="skills1" ng-model="skills1" type="text" placeholder="Skills" required>
-              <div class="alert alert-danger" ng-show="skillsForm.skills1.$dirty && skillsForm.skills1.$error.required">
+              <input class="form-control col-md-9" ng-model="interview.skills1" type="text" placeholder="Skills" required>
+              <div class="alert alert-danger" ng-show="interview.skills1.$dirty && interview.skills1.$error.required">
                 Please enter at least one skill!
               </div>
             </div>
             <div class="form-group col-md-10">
               <label class="col-md-10">Skill Set Title</label>
-              <input class="form-control col-md-10 input-lg" name="SkillSetTitle2" ng-model="skillSetTitle2" type="text" placeholder="Skill Set Title" >
+              <input class="form-control col-md-10 input-lg" ng-model="interview.skillSetTitle2" type="text" placeholder="Skill Set Title" >
               <label class="col-md-8">Skills</label>
-              <input class="form-control col-md-9" name="skills2" ng-model="skills2" type="text" placeholder="Skills" >
+              <input class="form-control col-md-9" ng-model="interview.skills2" type="text" placeholder="Skills" >
             </div>
             <div class="form-group col-md-10">
               <label class="col-md-10">Skill Set Title</label>
-              <input class="form-control col-md-10 input-lg" name="SkillSetTitle3" ng-model="skillSetTitle3" type="text" placeholder="Skill Set Title" >
+              <input class="form-control col-md-10 input-lg" ng-model="interview.skillSetTitle3" type="text" placeholder="Skill Set Title" >
 
               <label class="col-md-8">Skills</label>
-              <input class="form-control col-md-9" name="skills3" ng-model="skills3" type="text" placeholder="Skills" >
+              <input class="form-control col-md-9" ng-model="interview.skills3" type="text" placeholder="Skills" >
             </div>
             <div class="form-group col-md-10">
               <label class="col-md-10">Skill Set Title</label>
-              <input class="form-control col-md-10 input-lg" name="SkillSetTitle4" ng-model="skillSetTitle4" type="text" placeholder="Skill Set Title" >
+              <input class="form-control col-md-10 input-lg" ng-model="interview.skillSetTitle4" type="text" placeholder="Skill Set Title" >
 
               <label class="col-md-8">Skills</label>
-              <input class="form-control col-md-9" name="skills4" ng-model="skills4" type="text" placeholder="Skills" >
+              <input class="form-control col-md-9" ng-model="interview.skills4" type="text" placeholder="Skills" >
             </div>
             <div class="form-group col-md-10">
               <label class="col-md-10">Skill Set Title</label>
-              <input class="form-control col-md-10 input-lg" name="SkillSetTitle5" ng-model="skillSetTitle5" type="text" placeholder="Skill Set Title" >
+              <input class="form-control col-md-10 input-lg" ng-model="interview.skillSetTitle5" type="text" placeholder="Skill Set Title" >
 
               <label class="col-md-8">Skills</label>
-              <input class="form-control col-md-9" name="skills5" ng-model="skills5" type="text" placeholder="Skills" >
+              <input class="form-control col-md-9" ng-model="interview.skills5" type="text" placeholder="Skills" >
             </div>
             <div class="form-group col-md-6">
-              <button type="submit" ng-disabled="skillsForm.$invalid" class="btn btn-lg btn-primary col-md-12">Submit</button>
-              <div class="alert alert-warning" ng-show="skillsForm.$valid">
+              <button type="submit" ng-disabled="interview.$invalid" class="btn btn-lg btn-primary col-md-12">Submit</button>
+              <div class="alert alert-warning" ng-show="interview.$valid">
                 Please make sure you complete and submit each section.
               </div>
             </div>
@@ -145,33 +145,33 @@
       </tab>
       <tab heading="Favorite Music">
         <div>
-          <form name="musicForm" ng-submit="updateInfo(musicForm)" class="resume-form">
+          <form name="intervei" ng-submit="updateInfo(interview)" class="resume-form" ng-controller="StackedTabsController">
           <div class="form-group col-md-10">
             <label class="col-md-10">Favorite Music Category</label>
-            <input class="form-control col-md-10 input-lg" name="musicCategory" ng-model="musicCategory" type="text" placeholder="Favorite Music Category" required>
-            <div class="alert alert-danger" ng-show="musicForm.musicCategory.$dirty && musicForm.musicCategory.$error.required">
+            <input class="form-control col-md-10 input-lg" ng-model="interview.musicCategory" type="text" placeholder="Favorite Music Category" required>
+            <div class="alert alert-danger" ng-show="interview.musicCategory.$dirty && interview.musicCategory.$error.required">
               Please enter your favorite music category!
             </div>
             <label class="col-md-8">Favorite band 1:</label>
-            <input class="form-control col-md-9" name="band1" ng-model="band1" type="text" placeholder="Band 1" required>
-            <div class="alert alert-danger" ng-show="musicForm.band1.$dirty && musicForm.band1.$error.required">
+            <input class="form-control col-md-9" ng-model="interview.band1" type="text" placeholder="Band 1" required>
+            <div class="alert alert-danger" ng-show="interview.band1.$dirty && interview.band1.$error.required">
               Please at least one favorite band!
             </div>
             <label class="col-md-8">Favorite band 2:</label>
-            <input class="form-control col-md-9" name="band2" ng-model="band2" type="text" placeholder="Band 2" >
+            <input class="form-control col-md-9" ng-model="interview.band2" type="text" placeholder="Band 2" >
 
             <label class="col-md-8">Favorite band 3:</label>
-            <input class="form-control col-md-9" name="band3" ng-model="band3" type="text" placeholder="Band 3" >
+            <input class="form-control col-md-9" ng-model="interview.band3" type="text" placeholder="Band 3" >
 
             <label class="col-md-8">Favorite band 4:</label>
-            <input class="form-control col-md-9" name="band4" ng-model="band4" type="text" placeholder="Band 4" >
+            <input class="form-control col-md-9" ng-model="interview.band4" type="text" placeholder="Band 4" >
 
             <label class="col-md-8">Favorite band 5:</label>
-            <input class="form-control col-md-9" name="band5" ng-model="band5" type="text" placeholder="Band 5" >
+            <input class="form-control col-md-9" ng-model="interview.band5" type="text" placeholder="Band 5" >
           </div>
           <div class="form-group col-md-6">
-            <button type="submit" ng-disabled="musicForm.$invalid" class="btn btn-lg btn-primary col-md-12">Submit</button>
-            <div class="alert alert-warning" ng-show="musicForm.$valid">
+            <button type="submit" ng-disabled="interview.$invalid" class="btn btn-lg btn-primary col-md-12">Submit</button>
+            <div class="alert alert-warning" ng-show="interview.$valid">
               Please make sure you complete and submit each section.
             </div>
           </div>
@@ -180,30 +180,30 @@
       </tab>
       <tab heading="Hobbies">
         <div>
-          <form name="hobbyForm" ng-submit="updateInfo(hobbyForm)" class="resume-form">
+          <form ng-submit="updateInfo(interview)" class="resume-form" ng-controller="StackedTabsController">
           <div class="form-group col-md-10">
             <label class="col-md-8">Hobby 1:</label>
-            <input class="form-control col-md-9" name="hobby1" ng-model="hobby1" type="text" placeholder="Hobby 1" required>
-            <div class="alert alert-danger" ng-show="hobbyForm.hobby1.$dirty && hobbyForm.hobby1.$error.required">
+            <input class="form-control col-md-9" ng-model="interview.hobby1" type="text" placeholder="Hobby 1" required>
+            <div class="alert alert-danger" ng-show="interview.hobby1.$dirty && interview.hobby1.$error.required">
               You must enter at least one hobby!
             </div>
 
             <label class="col-md-8">Hobby 2:</label>
-            <input class="form-control col-md-9" name="hobby2" ng-model="hobby2" type="text" placeholder="Hobby 2" >
+            <input class="form-control col-md-9" ng-model="interview.hobby2" type="text" placeholder="Hobby 2" >
 
             <label class="col-md-8">Hobby 3:</label>
-            <input class="form-control col-md-9" name="hobby3" ng-model="hobby3" type="text" placeholder="Hobby 3" >
+            <input class="form-control col-md-9" ng-model="interview.hobby3" type="text" placeholder="Hobby 3" >
 
             <label class="col-md-8">Hobby 4:</label>
-            <input class="form-control col-md-9" name="hobby4" ng-model="hobby4" type="text" placeholder="Hobby 4" >
+            <input class="form-control col-md-9" ng-model="interview.hobby4" type="text" placeholder="Hobby 4" >
 
             <label class="col-md-8">Hobby 5:</label>
-            <input class="form-control col-md-9" name="hobby5" ng-model="hobby5" type="text" placeholder="Hobby 5" >
+            <input class="form-control col-md-9" ng-model="interview.hobby5" type="text" placeholder="Hobby 5" >
 
           </div>
           <div class="form-group col-md-6">
-            <button type="submit" ng-disabled="hobbyForm.$invalid" class="btn btn-lg btn-primary col-md-12">Submit</button>
-            <div class="alert alert-warning" ng-show="hobbyForm.$valid">
+            <button type="submit" ng-disabled="interview.$invalid" class="btn btn-lg btn-primary col-md-12">Submit</button>
+            <div class="alert alert-warning" ng-show="interview.$valid">
               Please make sure you complete and submit each section.
             </div>
           </div>
